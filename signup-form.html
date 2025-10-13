@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up - Ohm</title>
+  <link rel="icon" type="image/x-icon" href="/pictures/favicon.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+  <header>
+    <img src="pictures\Logo.svg" class="logo-img" onclick="window.location.href ='index.html'">
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <nav class="navbar">
+      <div class="nav-links">
+        <ul class="nav-ul">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="subscriptions.html">Subscriptions</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="signup-form.html"><span class="text-gradient" id="accountName">Sign up</span></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <div class="accounts-page-container">
+    <div class="signup-page-head-text">
+      <h2 class="head-text"><span class="text-gradient">Ohm</span> Accounts</h2><span class="section-title"><span
+          class="text-gradient">Ohm</span> Accounts streamlines profile and subscription management, offering
+        personalized content access and secure payments for an effortless user experience.</span>
+    </div>
+
+    <div class="signup-form-container" id="signup-form-container">
+      <a href="#signup-form-container">
+        <h2 class="form-head-text">Create an account</h2>
+      </a>
+      <form class="signup-form">
+        <div class="signup-form-inputs">
+          <div class="full-name-div">
+            <span class="signup-input-head-text" id="fullNameHeaderText">Enter full name</span>
+            <input type="text" id="full-name-input" class="gradient-input" />
+          </div>
+          <div class="email-div">
+            <span class="signup-input-head-text" id="emailHeaderText">Enter email</span>
+            <input type="email" id="email-input" class="gradient-input" />
+          </div>
+          <div class="set-password-div">
+            <span class="signup-input-head-text" id="createPasswordHeaderText">Create password</span>
+            <input type="password" id="set-password-input" class="gradient-input" />
+          </div>
+          <div class="confirm-password-div">
+            <span class="signup-input-head-text" id="confirmPasswordHeaderText">Confirm password</span>
+            <input type="password" id="confirm-password-input" class="gradient-input" />
+          </div>
+          <button class="gradient-button-1 create-account-btn" type="button" onclick="validateSignUpForm()">
+            Create Account
+          </button>
+          <div class="redirect-login-container">
+            <p class="redirect-login-text">Already have an account? <a href="login-form.html"><span
+                  class="text-gradient">Log in!</span></a></p>
+          </div>
+        </div>
+        <!--!Loading screen-->
+        <div class="signup-loading-screen" id="signup-loading-screen">
+          <div class="signup-loader-container">
+            <div class="signup-loader"></div>
+            <span class="signup-loader-text">Creating Account</span>
+          </div>
+        </div>
+
+        <!--! Signup confirmation form -->
+        <div class="signup-confirmation-screen-container" id="signup-confirmation-screen-container">
+          <div class="enter">
+            <span class="signup-confirmation-head-text"><span class="text-gradient">Ohm </span>Account Created!</span>
+          </div>
+          <p class="signup-confirmation-paragraph">
+            <span class="signup-confirmation-congratulations-sentence">
+              <span class="signup-confirmation-congratulations-word text-gradient">
+                Congratulations!
+              </span>
+            </span>
+            <br /><br />
+            <span class="signup-confirmation-appreciate-sentence">
+              Thank you for signing in. You can now log in with your new account!
+            </span>
+          </p>
+
+          <a href="login-form.html"><button type="button" class="gradient-button-1">Log in</button></a>
+
+        </div>
+
+
+
+      </form>
+
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="footer">
+        <div class="row-container row-1-container">
+          <ul class="row">
+            <li class="row_head">Explore</li>
+            <li onclick="window.location.href ='index.html'">Home</li>
+            <li onclick="window.location.href ='about.html'">About Us</li>
+            <li onclick="window.location.href ='subscriptions.html'">Subscriptions</li>
+
+          </ul>
+        </div>
+        <div class="row-container row-2-container">
+          <ul class="row">
+            <li class="row_head">Blog</li>
+            <li>Latest Posts</li>
+            <li>News</li>
+            <li>Insights</li>
+          </ul>
+        </div>
+        <div class="row-container row-3-container">
+          <ul class="row">
+            <li class="row_head">Help & FAQ</li>
+            <li onclick="window.location.href ='contact.html'">Support</li>
+            <li onclick="window.location.href ='terms-services.html'">Terms of Service</li>
+            <li onclick="window.location.href ='privacy-policy.html'">Privacy Policy</li>
+          </ul>
+        </div>
+        <div class="row-container row-4-container">
+          <p class="row_head">Newsletter</p>
+          <div class="newsletter-text">Subscribe to get weekly energy saving and tech tips!</div>
+          <div class="newsletter-container">
+            <input type="text" class="gradient-input newsletter-input" placeholder="Enter your email">
+            <button class="gradient-button-1 newsletter-button" onclick="sendNewsletterInfo()">Subscribe</button>
+          </div>
+        </div>
+      </div>
+      <div class="botm">
+        <div class="botm-language"><i class="fa fa-globe" style="font-size: 20px" id="globe"></i> English
+          (United States)</div>
+        <div onclick="window.location.href ='contact.html'">Contact ohm</div>
+        <div onclick="window.location.href ='privacy-policy.html'">Privacy & Cookies</div>
+        <div onclick="window.location.href ='terms-services.html'">Terms of use</div>
+        <div>© <span class="text-gradient">Ohm</span> 2023</div>
+      </div>
+    </div>
+  </footer>
+  <!--Javascript-->
+  <script src="script.js"></script>
+</body>
+
+</html>
